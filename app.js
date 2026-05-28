@@ -1,36 +1,28 @@
 
-const days = document.querySelectorAll('.day');
-
-days.forEach(day => {
+document.querySelectorAll('.day').forEach(day=>{
   const header = day.querySelector('.day-header');
-
   if(header){
-    header.addEventListener('click', () => {
+    header.addEventListener('click',()=>{
       day.classList.toggle('active');
     });
   }
 });
 
-const countdown = document.getElementById('countdown');
+const upload = document.getElementById('photoUpload');
+const gallery = document.getElementById('gallery');
 
-if(countdown){
-  const target = new Date('2026-06-03T18:35:00');
+if(upload && gallery){
+  upload.addEventListener('change', function(){
+    Array.from(this.files).forEach(file=>{
+      const reader = new FileReader();
 
-  function updateCountdown(){
-    const now = new Date();
-    const diff = target - now;
+      reader.onload = function(e){
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        gallery.appendChild(img);
+      };
 
-    if(diff <= 0){
-      countdown.innerHTML = '🌍 A viagem começou!';
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-
-    countdown.innerHTML = `${days} dias e ${hours} horas para a viagem`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown,1000);
+      reader.readAsDataURL(file);
+    });
+  });
 }

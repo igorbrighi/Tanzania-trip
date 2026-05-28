@@ -1,58 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tanzania & Zanzibar 2026</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanzania & Zanzibar 2026</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="topbar">
+<header class="topbar">
+  <div>
     <h1>Igor & Gabi</h1>
     <p>Tanzania & Zanzibar · Junho 2026</p>
-  </header>
+  </div>
+</header>
 
-  <main class="home-screen">
+<main class="home">
 
-    <section class="hero safari-theme">
-      <div class="hero-content">
-        <span class="hero-label">Safari Expedition</span>
-        <h2>Savana Africana</h2>
-        <p>
-          Tarangire, Serengeti, Ngorongoro e Lago Manyara.
-        </p>
-        <a class="hero-btn" href="pages/safari.html">Explorar Safari</a>
-      </div>
-    </section>
+<section class="hero safari-hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <span>🦁 Safari Expedition</span>
+    <h2>Savana Africana</h2>
+    <p>Tarangire · Serengeti · Ngorongoro · Manyara</p>
+    <a href="pages/safari.html">Explorar Safari</a>
+  </div>
+</section>
 
-    <section class="hero beach-theme">
-      <div class="hero-content">
-        <span class="hero-label">Zanzibar Escape</span>
-        <h2>Praias & Mergulho</h2>
-        <p>
-          Jambiani, Nungwi e Stone Town.
-        </p>
-        <a class="hero-btn" href="pages/zanzibar.html">Explorar Zanzibar</a>
-      </div>
-    </section>
+<section class="hero zanzibar-hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <span>🌴 Zanzibar Escape</span>
+    <h2>Praias & Mergulho</h2>
+    <p>Jambiani · Nungwi · Stone Town</p>
+    <a href="pages/zanzibar.html">Explorar Zanzibar</a>
+  </div>
+</section>
 
-    <section class="countdown-card">
-      <h3>🌍 Viagem África 2026</h3>
-      <p>03 de Junho → 19 de Junho</p>
-      <div id="countdown"></div>
-    </section>
+<section class="gallery-card">
+  <h3>📸 Álbum da Viagem</h3>
+  <p>Vocês podem adicionar fotos durante a viagem para amigos acompanharem.</p>
 
-  </main>
+  <input type="file" id="photoUpload" accept="image/*" multiple>
 
-  <nav class="bottom-nav">
-    <a href="index.html" class="active">🏠<span>Home</span></a>
-    <a href="pages/safari.html">🦁<span>Safari</span></a>
-    <a href="pages/zanzibar.html">🌴<span>Zanzibar</span></a>
-    <a href="pages/mapa.html">🗺️<span>Mapa</span></a>
-    <a href="pages/planejamento.html">📋<span>Plano</span></a>
-  </nav>
+  <div id="gallery" class="gallery"></div>
+</section>
 
-  <script src="app.js"></script>
+</main>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="active">🏠<span>Home</span></a>
+  <a href="pages/safari.html">🦁<span>Safari</span></a>
+  <a href="pages/zanzibar.html">🌴<span>Zanzibar</span></a>
+  <a href="pages/mapa.html">🗺️<span>Mapa</span></a>
+  <a href="pages/planejamento.html">📋<span>Plano</span></a>
+</nav>
+
+<script src="app.js"></script>
 </body>
 </html>
