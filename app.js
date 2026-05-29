@@ -1,6 +1,7 @@
 
 document.querySelectorAll('.day').forEach(day=>{
   const header = day.querySelector('.day-header');
+
   if(header){
     header.addEventListener('click',()=>{
       day.classList.toggle('active');
