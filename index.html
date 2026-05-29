@@ -1,68 +1,192 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanzania & Zanzibar 2026</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safari Adventures</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="topbar">
+    <h1>Safari Adventures</h1>
+    <p>Explore a beleza selvagem da África</p>
+  </div>
 
-<header class="topbar">
-<h1>Igor & Gabi</h1>
-<p>Tanzania & Zanzibar · Junho 2026</p>
-</header>
+  <div class="home" id="home">
+    <div class="hero safari-hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <span>ADVENTURE</span>
+        <h2>Safari no Serengeti</h2>
+        <p>Experimente a emoção de avistar os Big Five em seu habitat natural. Uma jornada inesquecível pelas savanas africanas.</p>
+        <a href="#" onclick="showPage('safari'); return false;">Explorar Safari</a>
+      </div>
+    </div>
 
-<main class="home">
+    <div class="hero zanzibar-hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <span>PARADISE</span>
+        <h2>Praias de Zanzibar</h2>
+        <p>Relaxe nas praias paradisíacas de areia branca e águas cristalinas do Oceano Índico.</p>
+        <a href="#" onclick="showPage('zanzibar'); return false;">Descobrir Zanzibar</a>
+      </div>
+    </div>
 
-<section class="hero safari-hero">
-<div class="overlay"></div>
+    <div class="gallery-card">
+      <h3>Suas Memórias</h3>
+      <p>Adicione fotos da sua aventura</p>
+      <input type="file" id="photoUpload" accept="image/*" multiple>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </div>
 
-<div class="hero-content">
-<span>🦁 Safari Expedition</span>
-<h2>Savana Africana</h2>
-<p>
-Tarangire · Serengeti · Ngorongoro · Lake Manyara
-</p>
+  <!-- Safari Page -->
+  <div class="page" id="safari" style="display:none;">
+    <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+    <div class="section-title">
+      <h2>Safari no Serengeti</h2>
+      <p>Itinerário completo da sua aventura</p>
+    </div>
 
-<a href="pages/safari.html">Explorar Safari</a>
-</div>
-</section>
+    <div class="accordion">
+      <div class="day">
+        <div class="day-header">
+          <div class="day-title">Dia 1 - Chegada em Arusha</div>
+        </div>
+        <div class="day-content">
+          <div class="info-block">
+            <h4>Atividades</h4>
+            <p>Chegada ao aeroporto, transfer para hotel, briefing sobre o safari.</p>
+          </div>
+          <div class="info-block">
+            <h4>Acomodação</h4>
+            <p>Hotel Four Points by Sheraton Arusha</p>
+          </div>
+          <div class="info-block">
+            <h4>Tags</h4>
+            <div class="tag">Chegada</div>
+            <div class="tag">Briefing</div>
+            <div class="tag">Descanso</div>
+          </div>
+        </div>
+      </div>
 
-<section class="hero zanzibar-hero">
-<div class="overlay"></div>
+      <div class="day">
+        <div class="day-header">
+          <div class="day-title">Dia 2 - Parque Nacional Serengeti</div>
+        </div>
+        <div class="day-content">
+          <div class="info-block">
+            <h4>Atividades</h4>
+            <p>Game drive matinal, almoço no parque, game drive vespertino.</p>
+          </div>
+          <div class="info-block">
+            <h4>Animais Esperados</h4>
+            <p>Leões, leopardos, elefantes, zebras, gnus</p>
+          </div>
+          <div class="info-block">
+            <h4>Tags</h4>
+            <div class="tag">Big Five</div>
+            <div class="tag">Game Drive</div>
+            <div class="tag">Fotografia</div>
+          </div>
+        </div>
+      </div>
 
-<div class="hero-content">
-<span>🌴 Zanzibar Escape</span>
-<h2>Praias & Mergulho</h2>
-<p>
-Jambiani · Nungwi · Stone Town
-</p>
+      <div class="day">
+        <div class="day-header">
+          <div class="day-title">Dia 3 - Cratera de Ngorongoro</div>
+        </div>
+        <div class="day-content">
+          <div class="info-block">
+            <h4>Atividades</h4>
+            <p>Descida à cratera, safari de dia inteiro, piquenique.</p>
+          </div>
+          <div class="info-block">
+            <h4>Destaques</h4>
+            <p>Rinocerontes negros, flamingos, hipopótamos</p>
+          </div>
+          <div class="info-block">
+            <h4>Tags</h4>
+            <div class="tag">Cratera</div>
+            <div class="tag">Rinocerontes</div>
+            <div class="tag">Patrimônio UNESCO</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<a href="pages/zanzibar.html">Explorar Zanzibar</a>
-</div>
-</section>
+    <div class="map-box">
+      <div>
+        <h3>Mapa Interativo</h3>
+        <p>Em breve: visualize sua rota pelo Serengeti</p>
+      </div>
+    </div>
+  </div>
 
-<section class="gallery-card">
-<h3>📸 Álbum da Viagem</h3>
-<p>Adicionem fotos durante a viagem para compartilhar com os amigos.</p>
+  <!-- Zanzibar Page -->
+  <div class="page" id="zanzibar" style="display:none;">
+    <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+    <div class="section-title">
+      <h2>Zanzibar Paradise</h2>
+      <p>Relaxe nas ilhas do Oceano Índico</p>
+    </div>
 
-<input type="file" id="photoUpload" accept="image/*" multiple>
+    <div class="accordion">
+      <div class="day">
+        <div class="day-header">
+          <div class="day-title">Dia 1 - Stone Town</div>
+        </div>
+        <div class="day-content">
+          <div class="info-block">
+            <h4>Atividades</h4>
+            <p>Tour pela cidade histórica, mercado de especiarias, sunset no forte.</p>
+          </div>
+          <div class="info-block">
+            <h4>Tags</h4>
+            <div class="tag">História</div>
+            <div class="tag">Especiarias</div>
+            <div class="tag">Cultura</div>
+          </div>
+        </div>
+      </div>
 
-<div id="gallery" class="gallery"></div>
-</section>
+      <div class="day">
+        <div class="day-header">
+          <div class="day-title">Dia 2-4 - Praias de Nungwi</div>
+        </div>
+        <div class="day-content">
+          <div class="info-block">
+            <h4>Atividades</h4>
+            <p>Relaxar na praia, mergulho, passeio de barco dhow.</p>
+          </div>
+          <div class="info-block">
+            <h4>Tags</h4>
+            <div class="tag">Praia</div>
+            <div class="tag">Mergulho</div>
+            <div class="tag">Barco</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</main>
+  </div>
 
-<nav class="bottom-nav">
-<a href="index.html" class="active">🏠<span>Home</span></a>
-<a href="pages/safari.html">🦁<span>Safari</span></a>
-<a href="pages/zanzibar.html">🌴<span>Zanzibar</span></a>
-<a href="pages/mapa.html">🗺️<span>Mapa</span></a>
-<a href="pages/planejamento.html">📋<span>Plano</span></a>
-</nav>
+  <!-- Modal Fullscreen Image -->
+  <div id="imgModal" class="modal">
+    <span class="close" id="modalClose">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="Foto">
+    </div>
+  </div>
 
-<script src="app.js"></script>
+  <div class="bottom-nav">
+    <a href="#" onclick="showPage('home'); return false;" class="active">Home</a>
+    <a href="#" onclick="showPage('safari'); return false;">Safari</a>
+    <a href="#" onclick="showPage('zanzibar'); return false;">Zanzibar</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
